@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:aa7d13bdcfbfab0f9f8d36c029af38b3$ -->
+<TextureAtlas imagePath="atlas.png">
+    <SubTexture name="button-down-skin" x="3" y="95" width="300" height="88"/>
+    <SubTexture name="button-up-skin" x="3" y="3" width="300" height="88"/>
+    <SubTexture name="tahoma30_0" x="3" y="187" width="256" height="160"/>
+</TextureAtlas>
