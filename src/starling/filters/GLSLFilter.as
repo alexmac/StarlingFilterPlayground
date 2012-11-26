@@ -107,7 +107,7 @@ package starling.filters
             trace("update...");
             this.vs = _vs;
             this.fs = _fs;
-            mRecreatePrograms = true;
+            createPrograms();
         }
 
         private var tmpVec:Vector.<Number> = new Vector.<Number>(4);
