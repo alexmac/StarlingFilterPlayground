@@ -6,6 +6,7 @@ all:
 		-compiler.omit-trace-statements=false \
 		-static-link-runtime-shared-libraries \
 		-library-path+=starling.swc \
+		-library-path+=feathers.swc \
 		-library-path+=glsl2agal.swc \
 		-swf-version=18 \
 		src/StarlingFilterPlayground.as -o demo/StarlingFilterPlayground.swf

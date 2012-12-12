@@ -53,14 +53,14 @@ package starling.filters
                     var compiledVertexShader:Object = JSON.parse(com.adobe.glsl2agal.compileShader(vs, 0, true));
                     trace(JSON.stringify(compiledVertexShader))
 
-                    mMVPConstantID = compiledVertexShader.varnames["gl_ModelViewProjectionMatrix"].slice(2)
-                    mVertexAttributeID = compiledVertexShader.varnames["gl_Vertex"].slice(2)
-                    mTextureAttributeID = compiledVertexShader.varnames["gl_MultiTexCoord0"].slice(2)
+                    mvpConstantID = compiledVertexShader.varnames["gl_ModelViewProjectionMatrix"].slice(2)
+                    vertexPosAtID = compiledVertexShader.varnames["gl_Vertex"].slice(2)
+                    texCoordsAtID = compiledVertexShader.varnames["gl_MultiTexCoord0"].slice(2)
 
                     var compiledFragmentShader:Object = JSON.parse(com.adobe.glsl2agal.compileShader(fs, 1, true));
                     trace(JSON.stringify(compiledFragmentShader))
 
-                    mBaseTextureID = compiledFragmentShader.varnames["baseTexture"].slice(2)
+                    baseTextureID = compiledFragmentShader.varnames["baseTexture"].slice(2)
 
                     mShaderProgram = assembleAgal(compiledFragmentShader.agalasm, compiledVertexShader.agalasm);
 
@@ -93,10 +93,10 @@ package starling.filters
 
             // Reset to the Identity filter
             trace("Switching to the Identity Shader...")
-            mMVPConstantID = 0
-            mVertexAttributeID = 0
-            mTextureAttributeID = 1
-            mBaseTextureID = 0
+            mvpConstantID = 0
+            vertexPosAtID = 0
+            texCoordsAtID = 1
+            baseTextureID = 0
             timeIdx = -1;
 
             mShaderProgram = assembleAgal();
